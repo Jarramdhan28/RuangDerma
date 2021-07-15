@@ -16,7 +16,7 @@
                         @csrf
                         <div class="row mb-4">
                             <div class="col">
-                                <h2><b>Masuk</b></h2>
+                                <h2><b>Masuk-2</b></h2>
                             </div>
                             <div class="col">
 
