@@ -18,7 +18,7 @@
                         @csrf
                         <div class="row mb-4">
                             <div class="col">
-                                <h2><b>Masuk</b></h2>
+                                <h2><b>Masuk-22</b></h2>
                             </div>
                             <div class="col d-grid gap-2 d-md-flex justify-content-md-end">
                                 <img src="{{asset("img/logo.png")}}" alt="" width="75">
