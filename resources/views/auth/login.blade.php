@@ -1,7 +1,7 @@
 <x-guest-layout>
 
     @extends('layouts.navbar')
-
+    @section('content')
     <x-jet-validation-errors class="mt-4" />
 
     <div class="container mt-login">
@@ -56,4 +56,6 @@
             </div>
         </div>
     </div>
+
+    @endsection
 </x-guest-layout>

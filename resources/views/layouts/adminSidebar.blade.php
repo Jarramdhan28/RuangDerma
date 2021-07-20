@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ config('app.name') }} | Admin</title>
-
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
-  <!-- Theme style -->
-  <link rel="stylesheet" href="/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/css/adminlte.min.css">
+    {{-- table --}}
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.css"/>
 </head>
 <body class="hold-transition sidebar-mini">
 
@@ -91,9 +92,9 @@
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar sidebar-light-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="../../index3.html" class="brand-link">
+        <a href="admin-dashboard" class="brand-link">
             <img src="img/Logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">Ruang Derma.</span>
         </a>
@@ -130,16 +131,17 @@
                     with font-awesome or any other icon font library -->
                 {{-- Dashboard --}}
                 <li class="nav-item">
-                    <a href="admin.dashboard" class="nav-link">
+                    <a href="{{url('admin-dashboard')}}" class="nav-link">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
                         Dashboard
                     </p>
                     </a>
                 </li>
+
                 {{-- Pengguna --}}
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="" class="nav-link">
                     <i class="nav-icon fas fa-users"></i>
                     <p>
                         Pengguna
@@ -148,19 +150,19 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="../../index.html" class="nav-link">
+                            <a href="{{url('admin-pengguna-admin')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>ADMIN</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../../index2.html" class="nav-link">
+                            <a href="{{url('/admin-pengguna-yayasan')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>YAYASAN</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../../index3.html" class="nav-link">
+                            <a href="{{url('/admin-pengguna-pribadi')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>PRIBADI</p>
                             </a>
@@ -171,7 +173,7 @@
                 {{-- Donasi --}}
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-users"></i>
+                    <i class="nav-icon fas fa-box"></i>
                     <p>
                         Donasi
                         <i class="right fas fa-angle-left"></i>
@@ -179,7 +181,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="../../index.html" class="nav-link">
+                            <a href="{{url('/admin-donasi-barang')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Barang Donasi</p>
                             </a>
@@ -194,7 +196,7 @@
                         <a href="{{ route('logout')}}" class="nav-link"
                                  onclick="event.preventDefault();
                                         this.closest('form').submit();">
-                                <i class="nav-icon fas fa-users"></i>
+                                <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>
                                     {{ __('Keluar') }}
                                     <i class="right fas fa-angle-left"></i>
@@ -229,6 +231,7 @@
         </aside>
         <!-- /.control-sidebar -->
     </div>
+
     <!-- ./wrapper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <!-- Bootstrap 4 -->
@@ -237,6 +240,14 @@
     <script src="/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="/js/demo.js"></script>
+    {{-- Table --}}
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.js"></script>
+    <script>
+        $(document).ready( function () {
+        $('table    ').DataTable();
+        } );
+    </script>
+
 </body>
 
 

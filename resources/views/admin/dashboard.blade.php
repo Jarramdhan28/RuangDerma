@@ -10,7 +10,7 @@
             </div>
             <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="admin.dashboard">Admin</a></li>
+                <li class="breadcrumb-item"><a href="{{url('admin-dashboard')}}">Admin</a></li>
                 <li class="breadcrumb-item active">Dashboard</li>
             </ol>
             </div>
@@ -19,32 +19,73 @@
     </section>
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content mt-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-info">
+                      <div class="inner">
+                        <h3>150</h3>
 
-        <!-- Default box -->
-        <div class="card">
-        <div class="card-header">
-            <h3 class="card-title">Gatau</h3>
+                        <p>Pengguna Pribadi</p>
+                      </div>
+                      <div class="icon">
+                        <i class="fas fa-user-alt"></i>
+                      </div>
+                      <a href="{{url('/admin-pengguna-pribadi')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
 
-            <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                <i class="fas fa-times"></i>
-            </button>
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-success">
+                      <div class="inner">
+                        <h3>10</h3>
+
+                        <p>Yayasan</p>
+                      </div>
+                      <div class="icon">
+                        <i class="fas fa-house-user"></i>
+                      </div>
+                      <a href="{{url('/admin-pengguna-yayasan')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-warning">
+                      <div class="inner">
+                        <h3>150</h3>
+
+                        <p>Donasi</p>
+                      </div>
+                      <div class="icon">
+                        <i class="fas fa-box"></i>
+                      </div>
+                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box bg-primary">
+                      <div class="inner">
+                        <h3>150</h3>
+
+                        <p>Saran</p>
+                      </div>
+                      <div class="icon">
+                        <i class="fas fa-mail-bulk"></i>
+                      </div>
+                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="card-body">
-            Start creating your amazing application!
-        </div>
-        <!-- /.card-body -->
-        <div class="card-footer">
-            Footer
-        </div>
-        <!-- /.card-footer-->
-        </div>
-        <!-- /.card -->
+
+
     </section>
   <!-- /.content -->
 @endsection

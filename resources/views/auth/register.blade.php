@@ -27,6 +27,10 @@
                                 <input type="email" class="form-control rounded-pill" placeholder="Masukan Email" id="email" aria-describedby="emailHelp" name="email" :value="old('email')" required autofocus >
                             </div>
 
+                            <div class="mb-4">
+                                <input id="phonenumber" class="form-control rounded-pill" placeholder="Masukan Nomor Telepon" type="text" name="phonenumber" :value="old('phonenumber')" required autofocus autocomplete="phonenumber" />
+                            </div>
+
                             <div class="mb-4 form-floating">
                                 <textarea class="form-control rounded-3" id="address" style="height: 80px" name="address"></textarea>
                                 <label for="address">Masukan Alamat</label>

@@ -34,7 +34,10 @@
 
                 </div>
             </div>
-
         </div>
     </nav>
+
+    <div class="container">
+        @yield('content')
+    </div>
 </x-guest-layout>
