@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
     <!-- Theme style -->
     <link rel="stylesheet" href="/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     {{-- table --}}
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.css"/>
 </head>
@@ -113,14 +114,14 @@
 
             <!-- SidebarSearch Form -->
             <div class="form-inline">
-            <div class="input-group" data-widget="sidebar-search">
-                <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                <button class="btn btn-sidebar">
-                    <i class="fas fa-search fa-fw"></i>
-                </button>
+                <div class="input-group" data-widget="sidebar-search">
+                    <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append">
+                    <button class="btn btn-sidebar">
+                        <i class="fas fa-search fa-fw"></i>
+                    </button>
+                    </div>
                 </div>
-            </div>
             </div>
 
             <!-- Sidebar Menu -->
@@ -199,7 +200,7 @@
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>
                                     {{ __('Keluar') }}
-                                    <i class="right fas fa-angle-left"></i>
+
                                 </p>
                         </a>
                     </form>

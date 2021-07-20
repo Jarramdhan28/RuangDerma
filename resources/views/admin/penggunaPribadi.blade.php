@@ -43,11 +43,11 @@
                             <td>{{$loop->iteration}}</td>
                             <td>{{$pribadi->name}}</td>
                             <td>{{$pribadi->email}}</td>
-                            <td>{{$yayasan->phonenumber}}</td>
+                            <td>{{$pribadi->phonenumber}}</td>
                             <td>{{$pribadi->address}}</td>
                             <td>{{$pribadi->information}}</td>
                             <td>
-                                <img src="{{ $pribadi->profile_photo_url }}" alt="{{ $pribadi->name }}" class="h-20 w-20 object-cover">
+                                <img src="{{ $pribadi->profile_photo_url }}" alt="{{ $pribadi->name }}" class="img-maxx">
                             </td>
                         </tr>
                         @endforeach
