@@ -4,7 +4,7 @@
     @section('content')
     <x-jet-validation-errors class="mt-4" />
 
-    <div class="container mt-login">
+    <div class="container mt-login mb-login">
         <div class="row justify-content-center pt-8 mx-auto">
             <div class="col-md-5">
                 <div class="card rounded-3 p-4">
