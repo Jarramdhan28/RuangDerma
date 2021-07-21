@@ -15,7 +15,7 @@ class LoginController extends Controller
        if ($user == 0 || $user == 1) {
            return view('user.home');
        }else{
-        return view('admin.index');
+        return view('admin.dashboard');
        }
     }
 }

@@ -1,3 +1,57 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    background-color: #E5E5E5;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.lengkung {
+    border: none;
+    border-radius: 20px;
+}
+
+.hov {
+    background-color: gray;
+    color: #fff;
+}
+
+.hov:hover {
+    background-color: lightblue;
+    color: #fff;
+    transition: 0.5s;
+}
+
+b {
+    font-weight: bold;
+}
+
+.card .welcomecollor {
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.card .welcomecollor:hover {
+    background-color: lightgreen;
+    text-shadow: 4px 4px;
+    transition: 0.5s;
+}
+
+.card:hover {
+    margin-top: -10px;
+    transition: 0.5s;
+}
+
 .mt-login{
-    padding-top: 90px;
+    padding-top: 110px;
+}
+
+.mb-login{
+    padding-bottom: 130px;
+}
+
+.img-maxx{
+    max-width: 50px;
 }

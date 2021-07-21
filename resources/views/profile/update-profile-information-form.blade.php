@@ -1,10 +1,10 @@
 <x-jet-form-section submit="updateProfileInformation">
     <x-slot name="title">
-        {{ __('Profile Information') }}
+        {{ __('Informasi Profil') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Update your account\'s profile information and email address.') }}
+        {{ __('Ubah Profil Anda') }}
     </x-slot>
 
     <x-slot name="form">
@@ -24,7 +24,12 @@
                                     reader.readAsDataURL($refs.photo.files[0]);
                             " />
 
-                <x-jet-label for="photo" value="{{ __('Photo') }}" />
+                @if($this->user->role == 0)
+                    <b class="text-xl">#Pengguna Pribadi</b>
+
+                @elseif($this->user->role == 1)
+                    <b class="text-xl">#Yayasan</b>
+                @endif
 
                 <!-- Current Profile Photo -->
                 <div class="mt-2" x-show="! photoPreview">
@@ -39,12 +44,12 @@
                 </div>
 
                 <x-jet-secondary-button class="mt-2 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
-                    {{ __('Select A New Photo') }}
+                    {{ __('Pilih Poto') }}
                 </x-jet-secondary-button>
 
                 @if ($this->user->profile_photo_path)
                     <x-jet-secondary-button type="button" class="mt-2" wire:click="deleteProfilePhoto">
-                        {{ __('Remove Photo') }}
+                        {{ __('Hapus Poto') }}
                     </x-jet-secondary-button>
                 @endif
 
@@ -54,26 +59,41 @@
 
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="name" value="{{ __('Name') }}" />
-            <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" autocomplete="name" />
+            <x-jet-label for="name" value="{{ __('Nama') }}" />
+            <x-jet-input id="name" type="text" class="mt-1 block w-full rounded-full" wire:model.defer="state.name" autocomplete="name" />
             <x-jet-input-error for="name" class="mt-2" />
         </div>
 
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="email" value="{{ __('Email') }}" />
-            <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
+            <x-jet-input id="email" type="email" class="mt-1 block w-full rounded-full" wire:model.defer="state.email" />
             <x-jet-input-error for="email" class="mt-2" />
         </div>
+
+        {{-- alamat --}}
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="address" value="{{ __('Alamat Lengkap') }}" />
+            <textarea id="address" type="text" class="mt-1 block w-full resize-y border rounded-md" wire:model.defer="state.address" autocomplete="address" ></textarea>
+            <x-jet-input-error for="address" class="mt-2" />
+        </div>
+
+        {{-- keterangan --}}
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="information" value="{{ __('Keterangan') }}" />
+            <textarea id="information" type="text" class="mt-1 block w-full resize-y border rounded-md" wire:model.defer="state.information" autocomplete="information" ></textarea>
+            <x-jet-input-error for="information" class="mt-2" />
+        </div>
+
     </x-slot>
 
     <x-slot name="actions">
         <x-jet-action-message class="mr-3" on="saved">
-            {{ __('Saved.') }}
+            {{ __('Tersimpan.') }}
         </x-jet-action-message>
 
         <x-jet-button wire:loading.attr="disabled" wire:target="photo">
-            {{ __('Save') }}
+            {{ __('Simpan') }}
         </x-jet-button>
     </x-slot>
 </x-jet-form-section>

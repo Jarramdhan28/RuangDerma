@@ -1,8 +1,10 @@
 <x-guest-layout>
 
     @extends('layouts.navbar')
+    @section('content')
+    <x-jet-validation-errors class="mt-4" />
 
-    <div class="container mt-login">
+    <div class="container mt-login mb-login">
         <div class="row justify-content-center pt-8 mx-auto">
             <div class="col-md-5">
                 <div class="card rounded-3 p-4">
@@ -18,8 +20,8 @@
                             <div class="col">
                                 <h2><b>Masuk</b></h2>
                             </div>
-                            <div class="col">
-
+                            <div class="col d-grid gap-2 d-md-flex justify-content-md-end">
+                                <img src="{{asset("img/logo.png")}}" alt="" width="75">
                             </div>
                         </div>
 
@@ -54,4 +56,6 @@
             </div>
         </div>
     </div>
+
+    @endsection
 </x-guest-layout>
